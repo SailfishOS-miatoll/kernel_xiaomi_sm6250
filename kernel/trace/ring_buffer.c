@@ -23,6 +23,7 @@
 #include <linux/list.h>
 #include <linux/cpu.h>
 
+#include <uapi/linux/eventpoll.h>
 #include <asm/local.h>
 
 static void update_pages_handler(struct work_struct *work);
