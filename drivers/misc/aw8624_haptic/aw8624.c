@@ -4111,7 +4111,7 @@ aw8624_i2c_probe(struct i2c_client *i2c, const struct i2c_device_id *id)
 		effect_count_max = aw8624->effects_count + 1;
 	else
 		effect_count_max = FF_EFFECT_COUNT_MAX;
-	rc = input_ff_create(input_dev, effect_count_max);
+	rc = input_ff_create_memless(input_dev, NULL, effect_count_max);
 	if (rc < 0) {
 		dev_err(aw8624->dev, "create FF input device failed, rc=%d\n",
 			rc);
